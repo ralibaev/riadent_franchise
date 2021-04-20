@@ -1,0 +1,66 @@
+.advantages {
+  padding-top: 60px;
+  background-color: $light-gray;
+  @media (max-width: $container-max) {padding-top: 50px;}
+  @media (max-width: $tablet-max) {padding-top: 30px;}
+  @media (max-width: $phone-max) {padding-top: 20px;}
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media (max-width: $phone-max) {flex-direction: column;}
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 80px 50px;
+    box-sizing: border-box;
+    border-radius: 80px;
+    background-color: $green;
+    &:last-child {
+      @media (max-width: $phone-max) {margin-bottom: 0;}
+    }
+    @media (max-width: $container-max) {
+      width: 32%;
+      padding: 50px;
+      border-radius: 68px;
+    }
+    @media (max-width: $laptop-max) {padding: 30px; border-radius: 56px;}
+    @media (max-width: $scaf) {padding: 30px 10px; border-radius: 46px;}
+    @media (max-width: $tablet-max) {padding: 20px 10px;}
+    @media (max-width: $phone-max) {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 30px 10px;
+    }
+  }
+  &__number, &__text {
+    line-height: 1;
+  }
+  &__number {
+    font-family: 'GraphikLCG-Bold';
+    font-size: 86px;
+    color: white;
+    @media (max-width: $laptop-max) {font-size: 60px;}
+    @media (max-width: $scaf) {font-size: 48px;}
+    @media (max-width: $tablet-max) {font-size: 36px;}
+  }
+  &__text {
+    margin-top: 40px;
+    font-family: 'GraphikLCG-Bold';
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    @media (max-width: $container-max) {margin-top: 25px;}
+    @media (max-width: $laptop-max) {margin-top: 20px;}
+    @media (max-width: $tablet-max) {margin-top: 10px; font-size: 14px;}
+  }
+}

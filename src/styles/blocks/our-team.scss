@@ -1,0 +1,130 @@
+.our-team {
+  padding: 60px 0;
+  background-color: $light-gray;
+  @media (max-width: $container-max) {padding: 50px 0;}
+  @media (max-width: $tablet-max) {padding: 30px 0;}
+  @media (max-width: $phone-max) {padding: 20px 0;}
+  &__title {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 2px);
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      box-sizing: border-box;
+      background-color: $green;
+      border: solid $gray;
+    	border-width: 0 40px;
+      @media (max-width: $container-max) {height: 3px; border-width: 0 34px;}
+      @media (max-width: $laptop-max) {border-width: 0 26px;}
+      @media (max-width: $scaf) {height: 2px; border-width: 0 22px;}
+      @media (max-width: $tablet-max) {border-width: 0 16px;}
+      @media (max-width: $phone-max) {height: 1px; border-width: 0 12px;}
+    }
+    &::before {
+      margin-left: -100%;
+    }
+    &::after {
+      margin-right: -100%;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 250px 0 0;
+    padding: 0;
+    list-style: none;
+    @media (max-width: $container-max) {margin-top: 190px;}
+    @media (max-width: $laptop-max) {margin-top: 150px;}
+    @media (max-width: $scaf) {margin-top: 120px;}
+    @media (max-width: $phone-max) {flex-wrap: wrap; margin-top: 0;}
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    background-color: $almost-black;
+    border-radius: 80px;
+    @media (max-width: $container-max) {border-radius: 62px;}
+    @media (max-width: $laptop-max) {border-radius: 52px;}
+    @media (max-width: $scaf) {border-radius: 44px;}
+    @media (max-width: $phone-max) {width: 48%; margin-top: 120px;}
+  }
+  &__img-block {
+    width: 93%;
+    height: 410px;
+    margin-top: -200px;
+    line-height: 0;
+    border-radius: 80px;
+    overflow: hidden;
+    @media (max-width: $container-max) {
+      height: 320px;
+      margin-top: -150px;
+      border-radius: 62px;
+    }
+    @media (max-width: $laptop-max) {
+      height: 264px;
+      margin-top: -120px;
+      border-radius: 52px;
+    }
+    @media (max-width: $scaf) {
+      height: 222px;
+      margin-top: -100px;
+      border-radius: 44px;
+    }
+    @media (max-width: $tablet-max) {
+      height: 170px;
+    }
+  }
+  &__text-block {
+    padding: 0 10px;
+    text-align: center;
+  }
+  h3, span, p, a {
+    color: white;
+  }
+  span, p, a {
+    font-size: 16px;
+    @media (max-width: $laptop-max) {font-size: 14px;}
+    @media (max-width: $scaf) {font-size: 12px;}
+  }
+  &__name, &__position {
+    text-transform: uppercase;
+  }
+  &__name {
+    font-size: 24px;
+    @media (max-width: $container-max) {font-size: 20px;}
+    @media (max-width: $laptop-max) {font-size: 18px;}
+    @media (max-width: $scaf) {font-size: 15px;}
+  }
+  &__links-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__link {
+    width: 70%;
+    height: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    @media (max-width: $container-max) {height: 32px;}
+    @media (max-width: $scaf) {height: 26px;}
+    &--sign {
+      background-color: $green;
+    }
+    &--more {
+      color: black !important;
+      background-color: $gray;
+      &:hover, &:active {color: white !important; background-color: $green;}
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.page-footer {
+  background-color: $footer-black;
+  &__container {
+    padding: 40px 0;
+    @media (max-width: $container-max) {padding: 32px 0;}
+  }
+  &__sections {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablet-max) {position: relative;}
+    @media (max-width: $phone-max) {flex-direction: column;}
+  }
+  &__section {
+    width: 28%;
+    @media (max-width: $container-max) {width: 29%;}
+    @media (max-width: $laptop-max) {width: 30%;}
+    @media (max-width: $tablet-max) {width: 40%;}
+    @media (max-width: $phone-max) {width: 100%;}
+    &:nth-child(1) {
+      width: 22%;
+      @media (max-width: $container-max) {width: 20%;}
+      @media (max-width: $laptop-max) {width: 18%;}
+      @media (max-width: $tablet-max) {width: 20%}
+      @media (max-width: $phone-max) {width: 100%;}
+    }
+    &:nth-child(4) {
+      width: 22%;
+      @media (max-width: $tablet-max) {width: 0;}
+      @media (max-width: $phone-max) {width: 100%;}
+    }
+  }
+  &__menu-title, &__menu-link {
+    font-size: 20px;
+    color: white;
+    @media (max-width: $laptop-max) {font-size: 18px;}
+    @media (max-width: $scaf) {font-size: 15px;}
+  }
+  &__menu-title {
+    font-family: 'GraphikLCG-Semibold';
+    text-transform: uppercase;
+  }
+  &__menu-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__menu-item {
+    margin-bottom: 10px;
+    // @media (max-width: $container-max) {margin-bottom: 8px;}
+  }
+  &__socials-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 440px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    @media (max-width: $laptop-max) {height: 400px;}
+    @media (max-width: $scaf) {height: 380px;}
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+  &__socials-text {
+    margin-right: 10px;
+    font-size: 18px;
+    color: white;
+    @media (max-width: $laptop-max) {
+      display: none;
+    }
+  }
+  &__socials-list {
+    @media (max-width: $tablet-max) and (min-width: $tablet-min) {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+    }
+  }
+  &__vk {
+    margin-top: 20px;
+    @media (max-width: $tablet-max) and (min-width: $tablet-min) {display: none;}
+  }
+  &__franchise-link {
+    width: 320px;
+    height: 40px;
+    margin-top: -40px;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    background-color: $green;
+    border: 2px solid $green;
+    border-radius: 20px;
+    @media (max-width: $scaf) {
+      width: 260px;
+      height: 32px;
+      margin-top: -32px;
+      font-size: 15px;
+    }
+    @media (max-width: $tablet-max) and (min-width: $tablet-min) {position: relative;}
+    @media (max-width: $phone-max) {margin: 0 auto}
+  }
+}

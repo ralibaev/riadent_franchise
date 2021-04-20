@@ -1,0 +1,85 @@
+.all-services {
+  padding: 60px 0;
+  @media (max-width: $container-max) {padding: 50px 0;}
+  @media (max-width: $tablet-max) {padding: 30px 0;}
+  @media (max-width: $phone-max) {padding: 20px 0;}
+  &__block {
+    padding: 80px;
+    border-radius: 80px;
+    background-color: $light-gray;
+    @media (max-width: $scaf) {padding: 40px; border-radius: 40px;}
+    @media (max-width: $tablet-max) {padding: 20px; border-radius: 20px;}
+  }
+  &__list {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    // padding: 0 1%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 0 50px;
+    // border: 1px solid $almost-black;
+    background-color: white;
+    border-radius: 30px;
+    // &:nth-child(1) .all-services__title-link::before {
+    //   background: url('../img/anesthetic.svg') no-repeat center/40px;
+    // }
+    @media (max-width: $scaf) {padding: 0 30px;}
+    @media (max-width: $tablet-max) {
+      padding: 0 20px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    hr {
+      height: 2px;
+      width: 100%;
+      margin: 0;
+      border: none;
+      background-color: black;
+    }
+  }
+  &__item-title, &__title-link {
+    font-size: 28px;
+    @media (max-width: $scaf) {font-size: 20px;}
+    @media (max-width: $tablet-max) {font-size: 16px;}
+  }
+  &__title-link, &__serv-link {
+    color: black;
+  }
+  // &__title-link {
+  //   position: relative;
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     width: 40px;
+  //     height: 40px;
+  //   }
+  // }
+  &__serv-list {
+    // display: inline-block;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__serv-item {
+    margin-bottom: 10px;
+  }
+  &__serv-link {
+    font-size: 20px;
+    @media (max-width: $scaf) {font-size: 16px;}
+    @media (max-width: $tablet-max) {font-size: 14px;}
+  }
+}

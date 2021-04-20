@@ -1,0 +1,36 @@
+.bottom-header {
+  height: 45px;
+  background-color: $light-black;
+  @media (max-width: $tablet-max) {height: 0;}
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &__nav-menu {
+    height: 100%;
+  }
+  &__whatsapp {
+    width: 220px;
+    height: 32px;
+    margin-left: 50px;
+    font-size: 14px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 16px;
+    @media (max-width: $scaf) {
+      width: 36px;
+      height: 36px;
+      background-image: url('../img/icon-whatsapp.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 28px;
+      border-radius: 18px;
+      font-size: 0;
+      &:hover {background-color: transparent; opacity: 0.7;}
+      &:active {opacity: 0.5;}
+    }
+    @media (max-width: $tablet-max) {display: none;}
+  }
+}

@@ -1,0 +1,143 @@
+.find-us {
+  background-color: $another-gray;
+  padding: 60px 0;
+  @media (max-width: $container-max) {padding: 50px 0;}
+  @media (max-width: $tablet-max) {padding: 30px 0;}
+  @media (max-width: $phone-max) {padding: 20px 0;}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $phone-max) {flex-direction: column;}
+  }
+  &__text-block {
+    width: 37%;
+    @media (max-width: $scaf) {width: 40%;}
+    @media (max-width: $tablet-max) {width: 45%;}
+    @media (max-width: $phone-max) {
+      order: 1;
+      width: 280px;
+      margin: 20px auto 0;
+    }
+  }
+  &__text, &__phone, &__mail, &__route {
+    font-family: 'GraphikLCG-Semibold';
+    color: white;
+    // text-transform: uppercase;
+  }
+  &__title {
+    margin-top: 0;
+    color: white;
+    text-transform: uppercase;
+  }
+  &__phone {
+    position: relative;
+    margin-left: 55px;
+    @media (max-width: $laptop-max) {margin-left: 45px;}
+    @media (max-width: $scaf) {margin-left: 40px;}
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -55px;
+      width: 45px;
+      height: 45px;
+      background: url('../img/phone-53x53.png') no-repeat center/45px;
+      @media (max-width: $laptop-max) {
+        left: -45px;
+        width: 38px;
+        height: 38px;
+        background-size: 38px;
+      }
+      @media (max-width: $scaf) {
+        top: -8px;
+        left: -40px;
+        width: 32px;
+        height: 32px;
+        background-size: 32px;
+      }
+    }
+  }
+  &__route {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 480px;
+    height: 60px;
+    text-transform: uppercase;
+    background-color: $green;
+    border: 2px solid $green;
+    border-radius: 30px;
+    @media (max-width: $laptop-max) {
+      width: 400px;
+      height: 50px;
+      border-radius: 25px;
+    }
+    @media (max-width: $scaf) {
+      width: 360px;
+      height: 40px;
+      border-radius: 20px;
+    }
+    @media (max-width: $tablet-max) {width: 320px;}
+    @media (max-width: $phone-max) {
+      width: 280px;
+      height: 32px;
+      border-radius: 16px;
+    }
+    &::after {
+      content: '';
+      width: 75px;
+      height: 41px;
+      background: url('../img/route-75x41.png') no-repeat center/75px 41px;
+      transition: all .3s ease-in-out;
+      @media (max-width: $laptop-max) {
+        width: 62px;
+        height: 34px;
+        background-size: 62px 34px;
+      }
+      @media (max-width: $scaf) {
+        width: 50px;
+        height: 27px;
+        background-size: 50px 27px;
+      }
+      @media (max-width: $phone-max) {
+        width: 40px;
+        height: 22px;
+        background-size: 40px 22px;
+      }
+    }
+    &:hover::after {background-image: url('../img/route-black-75x41.png');}
+  }
+  &__logo-img {
+    margin-top: 30px;
+    width: 277px;
+    height: 56px;
+    @media (max-width: $laptop-max) {
+      margin-top: 25px;
+      width: 230px;
+      height: 46px;
+    }
+    @media (max-width: $scaf) {
+      margin-top: 20px;
+      width: 185px;
+      height: 37px;
+    }
+    @media (max-width: $phone-max) {display: none;}
+  }
+  &__map-block {
+    width: 60%;
+    @media (max-width: $scaf) {width: 57%;}
+    @media (max-width: $tablet-max) {width: 53%;}
+    @media (max-width: $phone-max) {order: 0; width: 100%;}
+    iframe {
+      width: 100%;
+      height: 560px;
+      @media (max-width: $laptop-max) {height: 460px;}
+      @media (max-width: $scaf) {height: 390px;}
+      @media (max-width: $tablet-max) {height: 350px;}
+    }
+  }
+  &__map-img {
+    width: 1048px;
+    height: 600px;
+  }
+}

@@ -1,0 +1,88 @@
+.middle-banner {
+  position: relative;
+  height: 500px;
+  &__button {
+    position: absolute;
+    top: calc(50% - 27px);
+    width: 28px;
+    height: 53px;
+    border: none;
+    cursor: pointer;
+    &:hover {opacity: 0.7;}
+    &--prev {
+      left: 30px;
+      background: url('../img/bannerslider-prev-28x53.png') no-repeat center/28px 53px;
+    }
+    &--next {
+      right: 30px;
+      background: url('../img/bannerslider-next-28x53.png') no-repeat center/28px 53px;
+    }
+  }
+  &__container {
+    height: 100%;
+  }
+  &__button-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: -52px;
+  }
+  &__button-item {
+    width: 28px;
+    height: 28px;
+    margin: 0 12px;
+    background-color: $green-button;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    &--active {
+      background-color: $green;
+    }
+  }
+  &__slide-list {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  &__slide-item {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    transition: all .5s ease;
+  }
+  &__img-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46%;
+    height: 100%;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 54%;
+    height: 100%;
+  }
+  &__text {
+    font-family: 'GraphikLCG-Light';
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+  &__link {
+    width: 300px;
+    height: 85px;
+    font-family: 'GraphikLCG-Light';
+    font-size: 42px;
+    color: white;
+    background-color: $green;
+    border: 3px solid $green;
+    border-radius: 43px;
+  }
+}

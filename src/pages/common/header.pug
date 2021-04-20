@@ -1,0 +1,38 @@
+header.page-header
+  .top-header
+    .container.top-header__container
+      .top-header__block.top-header__block--logo
+        a.top-header__logo-link
+          picture
+            source(media='(max-width: 767px)' srcset='img/logo-white.png')
+            img.top-header__logo-img(src="img/logo.svg" alt="Логотип Риадент")
+        span.top-header__logo-span Улыбка вашей семьи в надежных руках
+      .top-header__block.top-header__block--socials
+        ul.socials__list
+          li.socials__item.socials__item--vk
+            a.socials__link(href="#") Вконтакте
+          li.socials__item.socials__item--inst
+            a.socials__link(href="#") Инстаграм
+          li.socials__item.socials__item--ytb
+            a.socials__link(href="#") Youtube
+      .top-header__block.top-header__block--adress
+        ul.top-header__adress-list
+          li.top-header__adress-item
+            a.top-header__adress-link(href="#") г. Уфа, ул. Кавказская 6/8
+          li.top-header__adress-item
+            a.top-header__adress-link(href="#") г. Сибай, ул. Горького 66
+          li.top-header__adress-item
+            a.link.top-header__adress-link.top-header__adress-link--navigator(href="#") Проложить маршрут
+      .top-header__block.top-header__block--contacts
+        a.top-header__tel(href="tel:+73472252520") +7 (347) 225-25-20
+        a.link.top-header__callme(href="#") Записаться на приём
+  .bottom-header
+    .container.bottom-header__container
+      nav.bottom-header__nav-menu.main-nav
+        ul.main-nav__list.main-nav__list--closed
+          each val in ['Главная', 'Услуги и цены', 'Детская', 'Лечение', 'Имплантация', 'Протезирование', 'Отбеливание', 'Контакты']
+            li.main-nav__item
+              a.link--underline(href="#")= val
+        button.main-nav__toggle
+          span Меню
+      a.link.bottom-header__whatsapp(href="#") Записаться по WhatsApp

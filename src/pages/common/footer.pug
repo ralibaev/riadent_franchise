@@ -1,0 +1,35 @@
+footer.page-footer
+  .container.page-footer__container
+    .page-footer__sections
+      .page-footer__section
+        h3.page-footer__menu-title Риадент
+        ul.page-footer__menu-list
+          each val in ['Наши доктора', 'Отзывы', 'Фотогалерея', 'Статьи', 'Пациентам', 'Вакансии', 'Оставить отзыв']
+            li.page-footer__menu-item
+              a.link--underline.page-footer__menu-link(href="#")= val
+      .page-footer__section
+        h3.page-footer__menu-title Услуги и цены
+        ul.page-footer__menu-list
+          each val in ['Эстетическая стоматология', 'Удаление зубов', 'Ортопедическое отделение', 'Стоматология для самых маленьких', 'Лечение по ДМС', 'Лечение зубов в рассрочку', 'Протезирование зубов', 'Металлокерамика']
+            li.page-footer__menu-item
+              a.link--underline.page-footer__menu-link(href="#")= val
+      .page-footer__section
+        h3.page-footer__menu-title Брекеты
+        ul.page-footer__menu-list
+          each val in ['Лечение зубов без боли', 'Лечение дёсен', 'Хирургическая стоматология', 'Имплантация зубов', 'Ортодонтическая стоматология', 'Протезирование зубов', 'Пародонтологическое отделение', 'Анестезия', 'Отбеливание зубов Zoom 4']
+            li.page-footer__menu-item
+              a.link--underline.page-footer__menu-link(href="#")= val
+      .page-footer__section
+        .page-footer__socials-block
+          .page-footer__socials
+            span.page-footer__socials-text Дружите с нами
+            ul.page-footer__socials-list.socials__list
+              li.socials__item.socials__item--vk
+                a.socials__link(href="#") Вконтакте
+              li.socials__item.socials__item--inst
+                a.socials__link(href="#") Инстаграм
+              li.socials__item.socials__item--ytb
+                a.socials__link(href="#") Youtube
+          .page-footer__vk(id='vk_groups')
+          script VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1}, 181554083);
+    a.link.page-footer__franchise-link(href='#') Франшиза стоматологии
